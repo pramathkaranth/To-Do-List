@@ -1,0 +1,113 @@
+/* Background Image and General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('bg1.jpg') no-repeat center/cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.add-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.add-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Task List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Task Status */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Task Buttons */
+.task-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.task-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Button Colors */
+.complete-btn { background: #4CAF50; }
+.edit-btn { background: #FFC107; }
+.delete-btn { background: #FF5722; }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
