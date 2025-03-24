@@ -1,32 +1,32 @@
-/* General Styling for Mobile Screens */
+/* Background Image and General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: url('bg1.jpg') no-repeat center/cover;
-    color: white;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-/* Main Container (Mobile-Friendly Size) */
+/* Main Container */
 .container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 450px; /* Android mid-range screen size */
+    max-width: 600px;
     text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
+    animation: fadeIn 1s ease-in;
 }
 
 /* Header */
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -34,109 +34,80 @@ h1 {
 .task-input {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
-/* Input Fields */
 input, select {
-    padding: 14px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 12px;
     border: none;
     outline: none;
     font-size: 1rem;
-    width: 100%;
 }
 
-/* Add Task Button */
 .add-btn {
-    padding: 14px;
+    padding: 12px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-/* Button Hover Effect */
-.add-btn:active {
-    transform: scale(0.95);
+.add-btn:hover {
+    transform: scale(1.1);
 }
 
-/* Task List */
+/* Task List Styling */
 ul {
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
 
-/* Task Item */
 li {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 12px 0;
-    padding: 14px;
-    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: background 0.3s ease;
-    font-size: 1rem;
 }
 
-/* Task Hover Effect */
-li:active {
-    background: rgba(255, 255, 255, 0.3);
+li:hover {
+    background: rgba(255, 255, 255, 0.25);
 }
 
-/* Completed Task */
+/* Task Status */
 .completed {
     text-decoration: line-through;
     opacity: 0.7;
 }
 
-/* Task Control Buttons */
+/* Task Buttons */
 .task-btn {
-    margin-left: 8px;
+    margin-left: 10px;
     cursor: pointer;
-    padding: 8px 10px;
-    border-radius: 10px;
-    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 8px;
     transition: transform 0.2s;
+}
+
+.task-btn:hover {
+    transform: scale(1.1);
 }
 
 /* Button Colors */
 .complete-btn { background: #4CAF50; }
 .edit-btn { background: #FFC107; }
-.delete-btn { background: #FF3D00; }
+.delete-btn { background: #FF5722; }
 
-/* Task Button Tap Effect */
-.task-btn:active {
-    transform: scale(1.1);
-}
-
-/* Animation */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-/* Responsive Design (Small Screens) */
-@media (max-width: 480px) {
-    .container {
-        width: 95%;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    input, select, .add-btn {
-        font-size: 1rem;
-    }
-
-    li {
-        font-size: 0.9rem;
-    }
 }
